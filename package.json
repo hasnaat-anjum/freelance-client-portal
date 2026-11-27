@@ -1,0 +1,10 @@
+{
+  "name": "freelance-client-portal",
+  "version": "1.0.0",
+  "description": "Build a branded client portal page for any freelance project — milestones, payments, what you need from the client, and updates — then export it as one self-contained HTML file. Free, offline, no account.",
+  "scripts": {
+    "test": "node js/money.test.js && node js/store.test.js && node js/portal.test.js",
+    "start": "python3 -m http.server 8000"
+  },
+  "license": "MIT"
+}

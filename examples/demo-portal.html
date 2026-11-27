@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Redesign for Bright Bakery — Hasnaat Anjum — Freelance Web Developer</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: #1f2937; background: #f3f4f6; line-height: 1.55; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; }
+  header { background: #1e3a5f; color: #fff; padding: 36px 24px 28px; border-radius: 0 0 16px 16px; }
+  header h1 { margin: 0 0 6px; font-size: 26px; line-height: 1.25; }
+  header .sub { margin: 0; opacity: .92; font-size: 15px; }
+  header .biz { margin: 14px 0 0; font-size: 13px; opacity: .85; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px 22px; margin-top: 16px; }
+  .card h2 { margin: 0 0 12px; font-size: 18px; }
+  .bar { height: 12px; background: #e5e7eb; border-radius: 99px; overflow: hidden; }
+  .bar > div { height: 100%; background: #1e3a5f; border-radius: 99px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+  .stat { flex: 1 1 140px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px; }
+  .stat b { display: block; font-size: 18px; }
+  .stat span { font-size: 12px; color: #6b7280; }
+  .next { margin: 14px 0 0; }
+  .ms { border-left: 3px solid #d1d5db; padding: 2px 0 14px 14px; }
+  .ms-done { border-left-color: #16a34a; }
+  .ms-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .ms-title { font-weight: 700; }
+  .ms-date { font-size: 13px; color: #6b7280; margin-top: 2px; }
+  .deliv { margin: 8px 0 0; padding-left: 18px; }
+  .deliv li { margin: 2px 0; }
+  .note { margin: 8px 0 0; font-size: 14px; color: #4b5563; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  td.num { text-align: right; white-space: nowrap; }
+  tfoot td { font-weight: 700; border-bottom: 0; }
+  .need { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+  .need:last-child { border-bottom: 0; }
+  .need-box { flex: 0 0 22px; height: 22px; border: 2px solid #d1d5db; border-radius: 6px; text-align: center; line-height: 19px; font-size: 14px; color: #fff; margin-top: 1px; }
+  .need-box-on { background: #16a34a; border-color: #16a34a; }
+  .need-body { flex: 1; }
+  .need-label { font-weight: 600; }
+  .need-detail { font-size: 13px; color: #6b7280; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; white-space: nowrap; }
+  .pill-done { background: #dcfce7; color: #166534; }
+  .pill-progress { background: #dbeafe; color: #1e40af; }
+  .pill-todo { background: #f3f4f6; color: #374151; }
+  .pill-overdue { background: #fee2e2; color: #991b1b; }
+  .pill-waiting { background: #fef3c7; color: #92400e; }
+  .pill-muted { background: #f3f4f6; color: #9ca3af; }
+  .upd { padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+  .upd:last-child { border-bottom: 0; }
+  .upd-date { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: .04em; }
+  .upd-text { margin-top: 2px; }
+  details { border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+  details summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 8px 0 0; color: #4b5563; }
+  footer { text-align: center; color: #6b7280; font-size: 13px; margin-top: 24px; }
+  footer a { color: #1e3a5f; }
+  .contact { margin: 8px 0 0; }
+  .contact a { color: #fff; }
+  .empty { color: #6b7280; }
+  @media (max-width: 560px) { header h1 { font-size: 22px; } .card { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Website Redesign for Bright Bakery</h1>
+<p class="sub">Hi Ayesha Khan &middot; Bright Bakery — here is where your project stands, all in one place.</p>
+<p class="biz">Hasnaat Anjum — Freelance Web Developer</p>
+<p class="contact"><a href="mailto:hasnaatanjum125@gmail.com">hasnaatanjum125@gmail.com</a> &middot; <span>+92 300 0000000</span> &middot; <a href="https://hasnaat-anjum-portfolio.vercel.app">https://hasnaat-anjum-portfolio.vercel.app</a></p>
+</header>
+<section class="card">
+<h2>Progress</h2>
+<div class="bar"><div style="width: 50%"></div></div>
+<div class="stats">
+<div class="stat"><b>50%</b><span>complete</span></div>
+<div class="stat"><b>2 of 5</b><span>milestones done</span></div>
+<div class="stat"><b>Rs. 75,000</b><span>paid of Rs. 150,000</span></div>
+<div class="stat"><b>3 of 5</b><span>items received from you</span></div>
+</div>
+<p class="next">Next up: <strong>Online ordering + payments</strong> — due 27 Nov 2026 (today)</p>
+</section>
+<section class="card">
+<h2>Milestones</h2>
+<div class="ms ms-done"><div class="ms-head"><span class="ms-title">Discovery &amp; homepage design</span><span class="pill pill-done">Done</span></div><div class="ms-date">Due 9 Nov 2026</div><ul class="deliv"><li>Homepage mockup approved</li><li>Colour palette + fonts agreed</li></ul><p class="note">Client picked the warm cream theme.</p></div>
+<div class="ms ms-done"><div class="ms-head"><span class="ms-title">Menu &amp; ordering pages</span><span class="pill pill-done">Done</span></div><div class="ms-date">Due 16 Nov 2026</div><ul class="deliv"><li>Menu page with photos</li><li>Online order form</li></ul></div>
+<div class="ms "><div class="ms-head"><span class="ms-title">Online ordering + payments</span><span class="pill pill-progress">In progress</span></div><div class="ms-date">Due 27 Nov 2026</div><ul class="deliv"><li>Cash on delivery checkout</li><li>Order confirmation email</li></ul><p class="note">Waiting on the bakery’s delivery areas list.</p></div>
+<div class="ms "><div class="ms-head"><span class="ms-title">Testing &amp; fixes</span><span class="pill pill-todo">Not started</span></div><div class="ms-date">Due 4 Dec 2026</div><ul class="deliv"><li>Mobile + desktop testing</li><li>Speed check</li></ul></div>
+<div class="ms "><div class="ms-head"><span class="ms-title">Launch &amp; handover</span><span class="pill pill-todo">Not started</span></div><div class="ms-date">Due 11 Dec 2026</div><ul class="deliv"><li>Site live on brightbakery.pk</li><li>Training video + handover doc</li></ul></div>
+</section>
+<section class="card">
+<h2>Payments</h2>
+<table>
+<thead><tr><th>Payment</th><th style="text-align:right">Amount</th><th>Due</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Deposit (50%)</td><td class="num">Rs. 75,000</td><td>2 Nov 2026</td><td><span class="pill pill-done">Paid</span></td></tr>
+<tr><td>Mid-project payment (25%)</td><td class="num">Rs. 37,500</td><td>27 Nov 2026</td><td><span class="pill pill-todo">Due 27 Nov 2026</span></td></tr>
+<tr><td>Final payment on launch (25%)</td><td class="num">Rs. 37,500</td><td>11 Dec 2026</td><td><span class="pill pill-todo">Due 11 Dec 2026</span></td></tr>
+</tbody>
+<tfoot><tr><td>Total</td><td class="num">Rs. 150,000</td><td colspan="2">Rs. 75,000 outstanding</td></tr></tfoot>
+</table>
+</section>
+<section class="card">
+<h2>What I need from you</h2>
+<div class="need"><span class="need-box need-box-on">&#10003;</span><div class="need-body"><div class="need-label">Logo files (PNG + SVG)</div><div class="need-detail">High-resolution logo, transparent background if possible.</div></div><span class="pill pill-done">Received</span></div>
+<div class="need"><span class="need-box need-box-on">&#10003;</span><div class="need-body"><div class="need-label">Photos of cakes &amp; bakery</div><div class="need-detail">10–15 good photos, phone photos are fine.</div></div><span class="pill pill-done">Received</span></div>
+<div class="need"><span class="need-box need-box-on">&#10003;</span><div class="need-body"><div class="need-label">Menu with prices</div><div class="need-detail">Full menu list with current prices in Rs.</div></div><span class="pill pill-done">Received</span></div>
+<div class="need"><span class="need-box "></span><div class="need-body"><div class="need-label">Delivery areas &amp; charges</div><div class="need-detail">Which areas you deliver to, and the delivery fee for each.</div></div><span class="pill pill-waiting">Waiting for you</span></div>
+<div class="need"><span class="need-box "></span><div class="need-body"><div class="need-label">Domain &amp; hosting login</div><div class="need-detail">Only needed before launch week — a temporary login is fine.</div></div><span class="pill pill-waiting">Waiting for you</span></div>
+</section>
+<section class="card">
+<h2>Latest updates</h2>
+<div class="upd"><div class="upd-date">20 Nov 2026</div><div class="upd-text">Menu and ordering pages are done. Next: online ordering and payments.</div></div>
+<div class="upd"><div class="upd-date">9 Nov 2026</div><div class="upd-text">Homepage design approved. Menu and ordering pages are now in progress.</div></div>
+<div class="upd"><div class="upd-date">2 Nov 2026</div><div class="upd-text">Project started. Deposit received — thank you! Homepage design is underway.</div></div>
+</section>
+<section class="card">
+<h2>Questions, answered</h2>
+<details><summary>How do I see the work in progress?</summary><p>I send a preview link at every milestone. You can open it on your phone — no login needed.</p></details>
+<details><summary>What if I want to change something?</summary><p>Small changes inside a milestone are free. Bigger changes go in a short change note with the extra cost and new date, so there are no surprises.</p></details>
+<details><summary>When do I pay?</summary><p>Payments follow the schedule on this page. Each payment is due on its date, and work on the next milestone starts once it arrives.</p></details>
+</section>
+<footer>
+<p>This page was prepared by Hasnaat Anjum — Freelance Web Developer on 27 Nov 2026.</p>
+<p>Questions? Email <a href="mailto:hasnaatanjum125@gmail.com">hasnaatanjum125@gmail.com</a>.</p>
+</footer>
+</div>
+</body>
+</html>

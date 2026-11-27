@@ -1,0 +1,170 @@
+{
+  "id": "p_mwykd86pnf",
+  "createdAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "status": "active",
+  "business": {
+    "name": "Hasnaat Anjum — Freelance Web Developer",
+    "email": "hasnaatanjum125@gmail.com",
+    "phone": "+92 300 0000000",
+    "website": "https://hasnaat-anjum-portfolio.vercel.app",
+    "brandColor": "#1e3a5f"
+  },
+  "client": {
+    "name": "Ayesha Khan",
+    "company": "Bright Bakery",
+    "email": "ayesha@brightbakery.pk"
+  },
+  "project": {
+    "title": "Website Redesign for Bright Bakery",
+    "type": "Website",
+    "startDate": "2026-11-02",
+    "currency": "PKR"
+  },
+  "milestones": [
+    {
+      "id": "m_mwykd86p7x",
+      "title": "Discovery & homepage design",
+      "date": "2026-11-09",
+      "status": "done",
+      "deliverables": [
+        "Homepage mockup approved",
+        "Colour palette + fonts agreed"
+      ],
+      "note": "Client picked the warm cream theme."
+    },
+    {
+      "id": "m_mwykd86ppc",
+      "title": "Menu & ordering pages",
+      "date": "2026-11-16",
+      "status": "done",
+      "deliverables": [
+        "Menu page with photos",
+        "Online order form"
+      ],
+      "note": ""
+    },
+    {
+      "id": "m_mwykd86pcp",
+      "title": "Online ordering + payments",
+      "date": "2026-11-27",
+      "status": "in-progress",
+      "deliverables": [
+        "Cash on delivery checkout",
+        "Order confirmation email"
+      ],
+      "note": "Waiting on the bakery’s delivery areas list."
+    },
+    {
+      "id": "m_mwykd86psi",
+      "title": "Testing & fixes",
+      "date": "2026-12-04",
+      "status": "todo",
+      "deliverables": [
+        "Mobile + desktop testing",
+        "Speed check"
+      ],
+      "note": ""
+    },
+    {
+      "id": "m_mwykd86pch",
+      "title": "Launch & handover",
+      "date": "2026-12-11",
+      "status": "todo",
+      "deliverables": [
+        "Site live on brightbakery.pk",
+        "Training video + handover doc"
+      ],
+      "note": ""
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay_mwykd86p2l",
+      "label": "Deposit (50%)",
+      "amountMinor": 7500000,
+      "dueDate": "2026-11-02",
+      "status": "paid"
+    },
+    {
+      "id": "pay_mwykd86p5o",
+      "label": "Mid-project payment (25%)",
+      "amountMinor": 3750000,
+      "dueDate": "2026-11-27",
+      "status": "unpaid"
+    },
+    {
+      "id": "pay_mwykd86pjz",
+      "label": "Final payment on launch (25%)",
+      "amountMinor": 3750000,
+      "dueDate": "2026-12-11",
+      "status": "unpaid"
+    }
+  ],
+  "needs": [
+    {
+      "id": "n_mwykd86pst",
+      "label": "Logo files (PNG + SVG)",
+      "detail": "High-resolution logo, transparent background if possible.",
+      "status": "received"
+    },
+    {
+      "id": "n_mwykd86p58",
+      "label": "Photos of cakes & bakery",
+      "detail": "10–15 good photos, phone photos are fine.",
+      "status": "received"
+    },
+    {
+      "id": "n_mwykd86pek",
+      "label": "Menu with prices",
+      "detail": "Full menu list with current prices in Rs.",
+      "status": "received"
+    },
+    {
+      "id": "n_mwykd86p4v",
+      "label": "Delivery areas & charges",
+      "detail": "Which areas you deliver to, and the delivery fee for each.",
+      "status": "waiting"
+    },
+    {
+      "id": "n_mwykd86po4",
+      "label": "Domain & hosting login",
+      "detail": "Only needed before launch week — a temporary login is fine.",
+      "status": "waiting"
+    }
+  ],
+  "updates": [
+    {
+      "id": "u_mwykd86pmt",
+      "date": "2026-11-02",
+      "text": "Project started. Deposit received — thank you! Homepage design is underway."
+    },
+    {
+      "id": "u_mwykd86pmk",
+      "date": "2026-11-09",
+      "text": "Homepage design approved. Menu and ordering pages are now in progress."
+    },
+    {
+      "id": "u_mwykd86pcz",
+      "date": "2026-11-20",
+      "text": "Menu and ordering pages are done. Next: online ordering and payments."
+    }
+  ],
+  "faqs": [
+    {
+      "id": "f_mwykd86p1w",
+      "q": "How do I see the work in progress?",
+      "a": "I send a preview link at every milestone. You can open it on your phone — no login needed."
+    },
+    {
+      "id": "f_mwykd86pf8",
+      "q": "What if I want to change something?",
+      "a": "Small changes inside a milestone are free. Bigger changes go in a short change note with the extra cost and new date, so there are no surprises."
+    },
+    {
+      "id": "f_mwykd86p88",
+      "q": "When do I pay?",
+      "a": "Payments follow the schedule on this page. Each payment is due on its date, and work on the next milestone starts once it arrives."
+    }
+  ]
+}

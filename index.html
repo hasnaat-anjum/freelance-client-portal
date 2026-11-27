@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance Client Portal Builder — one page per client project</title>
+<meta name="description" content="Build a branded client portal page for any freelance project: milestones, payments, what you need from the client, and updates — then export it as one HTML file to send your client. Free, offline, no account.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="inner">
+    <div>
+      <h1>Freelance Client Portal Builder</h1>
+      <p>One clean status page per client project — so clients stop asking “where are we?” and you stop answering it in DMs.</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-white" id="btn-load-demo" type="button">Load demo portal</button>
+      <button class="btn btn-white" id="btn-new-portal" type="button">+ New portal</button>
+      <button class="btn btn-white" id="btn-export-json" type="button">Export all (JSON)</button>
+      <button class="btn btn-white" id="btn-import-json" type="button">Import JSON</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="notice" class="notice" hidden></div>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section id="view-dashboard" class="view">
+    <div class="stats-row" id="dashboard-stats"></div>
+    <div id="dashboard-empty" class="card empty-state" hidden>
+      <h2>No portals yet</h2>
+      <p>Build your first client portal in about five minutes: add the project, its milestones and payments, then export one HTML file and send it to your client.</p>
+      <p>
+        <button class="btn btn-primary" id="btn-empty-demo" type="button">Load the demo portal</button>
+        <button class="btn" id="btn-empty-new" type="button">Start from scratch</button>
+      </p>
+    </div>
+    <div class="portal-grid" id="portal-grid"></div>
+  </section>
+
+  <!-- ============ EDITOR ============ -->
+  <section id="view-editor" class="view" hidden>
+    <div class="editor-top">
+      <button class="back-link" id="btn-back" type="button">&larr; All portals</button>
+      <h2 id="editor-title">Edit portal</h2>
+      <select id="portal-status" aria-label="Portal status">
+        <option value="active">Active</option>
+        <option value="on-hold">On hold</option>
+        <option value="completed">Completed</option>
+      </select>
+      <button class="btn btn-dark" id="btn-save" type="button">Save portal</button>
+    </div>
+
+    <div class="editor-grid">
+      <div>
+        <!-- Details -->
+        <div class="card">
+          <h2>Details</h2>
+          <p class="hint">Your business, your client, and the project. This is what the client sees at the top of their page.</p>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="f-biz-name">Your name / business *</label>
+              <input id="f-biz-name" type="text" placeholder="e.g. Hasnaat Anjum — Freelance Web Developer" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-biz-email">Your email</label>
+              <input id="f-biz-email" type="email" placeholder="you@example.com" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-biz-phone">Your phone <span class="optional">(optional)</span></label>
+              <input id="f-biz-phone" type="tel" placeholder="+92 ..." autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-biz-website">Your website <span class="optional">(optional)</span></label>
+              <input id="f-biz-website" type="url" placeholder="https://your-site.com" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-brand">Brand colour</label>
+              <input id="f-brand" type="color" value="#1e3a5f">
+            </div>
+            <div class="field full">
+              <label for="f-client-name">Client name *</label>
+              <input id="f-client-name" type="text" placeholder="e.g. Ayesha Khan" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-client-company">Client company <span class="optional">(optional)</span></label>
+              <input id="f-client-company" type="text" placeholder="e.g. Bright Bakery" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-client-email">Client email <span class="optional">(optional)</span></label>
+              <input id="f-client-email" type="email" placeholder="client@example.com" autocomplete="off">
+            </div>
+            <div class="field full">
+              <label for="f-project-title">Project title *</label>
+              <input id="f-project-title" type="text" placeholder="e.g. Website Redesign for Bright Bakery" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="f-project-type">Project type</label>
+              <select id="f-project-type">
+                <option>Website</option>
+                <option>Design / Branding</option>
+                <option>SEO</option>
+                <option>Marketing</option>
+                <option>Writing / Content</option>
+                <option>Video</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-project-currency">Currency</label>
+              <select id="f-project-currency">
+                <option value="PKR">PKR — Pakistani Rupee</option>
+                <option value="USD" selected>USD — US Dollar</option>
+                <option value="GBP">GBP — British Pound</option>
+                <option value="EUR">EUR — Euro</option>
+                <option value="INR">INR — Indian Rupee</option>
+                <option value="AED">AED — UAE Dirham</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-project-start">Start date</label>
+              <input id="f-project-start" type="date">
+            </div>
+          </div>
+          <p class="field-error" id="details-errors" hidden></p>
+        </div>
+
+        <!-- Lists -->
+        <div class="card">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="milestones" type="button">Milestones</button>
+            <button class="tab" data-tab="payments" type="button">Payments</button>
+            <button class="tab" data-tab="needs" type="button">What I need</button>
+            <button class="tab" data-tab="updates" type="button">Updates</button>
+            <button class="tab" data-tab="faqs" type="button">FAQs</button>
+          </div>
+          <div class="tab-panel" id="panel-milestones"></div>
+          <div class="tab-panel" id="panel-payments" hidden></div>
+          <div class="tab-panel" id="panel-needs" hidden></div>
+          <div class="tab-panel" id="panel-updates" hidden></div>
+          <div class="tab-panel" id="panel-faqs" hidden></div>
+        </div>
+      </div>
+
+      <!-- Live preview -->
+      <div class="preview-wrap">
+        <div class="card">
+          <h2>Live preview — what your client sees</h2>
+          <p class="hint">This is the exact page the exported file contains. Update anything on the left and it changes here instantly.</p>
+          <iframe class="preview-frame" id="preview-frame" title="Client portal preview" sandbox="allow-same-origin"></iframe>
+          <div class="preview-actions">
+            <button class="btn btn-primary" id="btn-download-html" type="button">Download portal page (.html)</button>
+            <button class="btn" id="btn-print-portal" type="button">Print / Save as PDF</button>
+            <button class="btn" id="btn-duplicate" type="button">Duplicate portal</button>
+            <button class="btn btn-danger" id="btn-delete" type="button">Delete portal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer-note">Free, offline, no account. Your data never leaves your browser — it lives in this browser's local storage, and the exported portal page is a single self-contained file.</p>
+</main>
+
+<script src="js/money.js"></script>
+<script src="js/store.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
